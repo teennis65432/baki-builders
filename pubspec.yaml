@@ -58,6 +58,9 @@ dev_dependencies:
 flutter_native_splash:
   color: '#FFA500' #orange
   image: assets/image/logo.png
+  android_gravity: fill_horizontal
+  ios_content_mode: scaleAspectFit
+  web_image_mode: stretch
 
 
 # For information on the generic Dart part of this file, see the
