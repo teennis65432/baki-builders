@@ -103,7 +103,6 @@ Future<String?> signUp(String email, String password, BuildContext context) asyn
       Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
     }
   } catch (e) {
-    print("Error happend");
     errorText = e.toString();
     Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
   }
