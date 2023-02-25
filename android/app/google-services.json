@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "506140181003",
+    "firebase_url": "https://bakibuilders-default-rtdb.firebaseio.com",
+    "project_id": "bakibuilders",
+    "storage_bucket": "bakibuilders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506140181003:android:fc14442357636da9ed7d0e",
+        "android_client_info": {
+          "package_name": "com.example.baki_builders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506140181003-5mcia1ekaph4ghrjuavfem8ga76ri8b4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOWXaIsOU_VbVnPMfCpy8Tlv-GZw1WT3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506140181003-5mcia1ekaph4ghrjuavfem8ga76ri8b4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "506140181003-3ofd0hc3td8ed40vli73rhmjjk3u93kd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bakiBuilders"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

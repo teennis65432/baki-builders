@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'account.dart';
+import 'loginPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+String accountText = 'Login/SignUp';
+bool isLoggedIn = false;
 
 class DrawerWidget extends StatelessWidget {
-  const DrawerWidget({super.key});
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  DrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    User? user = _auth.currentUser;
+    if (user != null) {
+      accountText = 'Account';
+      isLoggedIn = true;
+    }
+    else {
+      accountText = 'Login/SignUp';
+      isLoggedIn = false;
+    }
+
     return Drawer(
           child: Container(
             padding: const EdgeInsets.only(top: 25),
@@ -14,14 +31,15 @@ class DrawerWidget extends StatelessWidget {
               children: [// creates multiple children cases for the multiple button/clickable tiles
                 ListTile(
                   leading: const Icon(Icons.login, color: Colors.black),
-                  title: const Text('Login'),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: const Icon(
-                      Icons.account_circle, color: Colors.black),
-                  title: const Text('Account'),
-                  onTap: () {},
+                  title:  Text(accountText),
+                  onTap: () {
+                    if (accountText == 'Login/SignUp') {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                    } else {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => AccountPage()));
+                    }
+
+                  },
                 ),
                 ListTile(
                   leading: const Icon(
