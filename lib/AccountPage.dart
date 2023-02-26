@@ -1,4 +1,4 @@
-import 'package:baki_builders/main.dart';
+import 'package:baki_builders/MainHomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -17,8 +17,8 @@ class AccountPage extends StatelessWidget {
     email  = user?.email;
     return Scaffold(
       body: Container(
-        color: Colors.orange,
-        padding: EdgeInsets.all(16.0),
+        color: Colors.black45,
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -32,9 +32,9 @@ class AccountPage extends StatelessWidget {
                   _auth.signOut();
                   Navigator.push(context, MaterialPageRoute(builder: (context) => App()));
                 },
-                child: Text('Log Out'),
+                child: const Text('Log Out'),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
             ],
           ),
         ),
@@ -48,3 +48,4 @@ class AccountPage extends StatelessWidget {
     );
   }
 }
+

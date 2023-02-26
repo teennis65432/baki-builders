@@ -1,4 +1,4 @@
-import 'package:baki_builders/main.dart';
+import 'package:baki_builders/MainHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'Drawer.dart';
@@ -14,8 +14,8 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.orange,
-        padding: EdgeInsets.all(16.0),
+        color: Colors.black45,
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -24,33 +24,33 @@ class SignUpPage extends StatelessWidget {
                 'Sign Up',
                 style: Theme.of(context).textTheme.headline4,
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               TextField(
                 controller: emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               TextField(
                 controller: passwordController,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Password',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               TextField(
                 controller: passConfirmController,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Confirm Password',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               ElevatedButton(
                 onPressed: () {
                   if (passwordController.text == passConfirmController.text) {
@@ -60,11 +60,11 @@ class SignUpPage extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                   }
                 },
-                child: Text('Sign Up'),
+                child: const Text('Sign Up'),
               ),
               Text(
                   errorText,
-                  style: TextStyle(
+                  style: const TextStyle(
                   color: Colors.red, // Set the color here
                   fontSize: 12.0,
                   fontWeight: FontWeight.bold,
