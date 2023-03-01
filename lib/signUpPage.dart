@@ -57,6 +57,8 @@ class SignUpPage extends StatelessWidget {
                     _createAccount(context);
                   } else {
                     errorText = 'Passwords do not match';
+                    passConfirmController.clear();
+                    passwordController.clear();
                     Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                   }
                 },
@@ -128,6 +130,9 @@ void _createAccount(BuildContext context) async {
   if (userId == null) {
     return;
   } else {
+    passConfirmController.clear();
+    passwordController.clear();
+    emailController.clear();
     Navigator.push(context, MaterialPageRoute(builder: (context) => App()));
   }
 

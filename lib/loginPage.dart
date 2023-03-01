@@ -53,6 +53,8 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 16.0),
               TextButton(
                 onPressed: () {
+                  emailController.clear();
+                  passwordController.clear();
                   Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                 },
                 child: const Text('Don\'t have an account? Sign up'),
@@ -95,6 +97,8 @@ Future<void> login(BuildContext context) async {
         email: emailController.text,
         password: passwordController.text,
     );
+    emailController.clear();
+    passwordController.clear();
     Navigator.push(context, MaterialPageRoute(builder: (context) => App()));
   } on FirebaseAuthException catch (e) {
     if (e.code == 'user-not-found') {
