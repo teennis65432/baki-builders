@@ -62,7 +62,11 @@ class Back_model extends StatelessWidget {
                   // Navigate back to the muscle groups page
                   Navigator.pop(context);
                 },
+<<<<<<< HEAD
                 child: const Text('Front'),
+=======
+                child: const Text('View Front'),
+>>>>>>> bca8f496fdbab441b59995bdcd944689fcccc799
               ),
             ),
           ],
