@@ -8,10 +8,8 @@ class Workout_Plans extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Workout Plans'),
-        backgroundColor: Colors.orange,
       ),
       body: Container(
-        color: Colors.black45,
         // Add page content here
       ),
     );
