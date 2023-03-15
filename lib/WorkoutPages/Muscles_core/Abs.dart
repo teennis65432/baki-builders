@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Abdominal extends StatelessWidget {
-  const Abdominal ({Key? key}) : super(key: key);
+class Abs extends StatelessWidget {
+  const Abs ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

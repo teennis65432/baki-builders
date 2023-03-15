@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
-
+import 'dart:math' as num;
 import 'Back_model.dart';
-import 'Chest.dart';
+import 'WorkoutPages/Muscles_core/Abs.dart';
+import 'WorkoutPages/Muscles_back/LatissimusDorsi.dart';
+import 'WorkoutPages/Muscles_back/LowerBack.dart';
+import 'WorkoutPages/Muscles_back/Trapezius.dart';
+import 'WorkoutPages/Muscles_core/Obliques.dart';
+import 'WorkoutPages/Muscles_lower/Calves.dart';
+import 'WorkoutPages/Muscles_lower/Glutes.dart';
+import 'WorkoutPages/Muscles_lower/Hamstrings.dart';
+import 'WorkoutPages/Muscles_lower/Quadriceps.dart';
+import 'WorkoutPages/Muscles_upper/Biceps.dart';
+import 'WorkoutPages/Muscles_upper/Chest.dart';
+import 'WorkoutPages/Muscles_upper/Forearms.dart';
+import 'WorkoutPages/Muscles_upper/Shoulders.dart';
+import 'WorkoutPages/Muscles_upper/Triceps.dart';
+
 
 class MuscleGroups extends StatelessWidget {
   const MuscleGroups({Key? key}) : super(key: key);
@@ -32,14 +46,33 @@ class MuscleGroups extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 165,
-                    left: 115,
+                    top: 128,
+                    left: 105,
                     child: Container(
                       width: 50,
-                      height: 50,
-                      color: Colors.green,
+                      height: 65,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(10.0), // Set the border radius to 10
+                      ),
                     ),
                   ),
+                  Positioned(
+                    top: 300,
+                    left: 200,
+                    child: Transform.rotate(
+                      angle: 45 * num.pi / 180, // Set the rotation angle to 45 degrees
+                      child: Container(
+                        width: 45,
+                        height: 95,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                    ),
+                  ),
+
 
                   // Add more Positioned widgets for other clickable parts of the image
                 ],
@@ -47,11 +80,11 @@ class MuscleGroups extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Chest()),
+                  MaterialPageRoute(builder: (context) => const Abs()),
                 );
+
               },
             ),
-            const SizedBox(height: 20),
             SizedBox(
               width: 200,
               height: 50,
@@ -60,9 +93,13 @@ class MuscleGroups extends StatelessWidget {
                   // Navigate to the Back_model screen
                   Navigator.push(
                     context,
+
                     MaterialPageRoute(builder: (context) => const Back_model()),
                   );
                 },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange, // Set the button color to orange
+                ),
                 child: const Text('View Back'),
               ),
             ),
