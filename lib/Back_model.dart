@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Back_model.dart';
-import 'Chest.dart';
-
-class MuscleGroups extends StatelessWidget {
-  const MuscleGroups({Key? key}) : super(key: key);
+class Back_model extends StatelessWidget {
+  const Back_model({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,28 +24,33 @@ class MuscleGroups extends StatelessWidget {
                 children: [
                   Flexible(
                     child: Image.asset(
-                      'assets/image/model_front.jpeg',
+                      'assets/image/model_back.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),
                   Positioned(
-                    top: 165,
-                    left: 115,
+                    top: 50,
+                    left: 100,
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Positioned(
+                    top: 150,
+                    left: 200,
                     child: Container(
                       width: 50,
                       height: 50,
                       color: Colors.green,
                     ),
                   ),
-
                   // Add more Positioned widgets for other clickable parts of the image
                 ],
               ),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Chest()),
-                );
+                // Do something when the back of the model is clicked
               },
             ),
             const SizedBox(height: 20),
@@ -57,13 +59,10 @@ class MuscleGroups extends StatelessWidget {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigate to the Back_model screen
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Back_model()),
-                  );
+                  // Navigate back to the muscle groups page
+                  Navigator.pop(context);
                 },
-                child: const Text('Back'),
+                child: const Text('Front'),
               ),
             ),
           ],
