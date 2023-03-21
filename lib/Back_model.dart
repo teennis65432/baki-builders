@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as angles;
+import 'WorkoutPages/Muscles_back/LatissimusDorsi.dart';
+import 'WorkoutPages/Muscles_back/LowerBack.dart';
+import 'WorkoutPages/Muscles_back/Trapezius.dart';
+import 'WorkoutPages/Muscles_lower/Calves.dart';
+import 'WorkoutPages/Muscles_lower/Glutes.dart';
+import 'WorkoutPages/Muscles_lower/Hamstrings.dart';
+import 'WorkoutPages/Muscles_upper/Triceps.dart';
+
 class Back_model extends StatelessWidget {
   const Back_model({super.key});
 
@@ -32,6 +40,13 @@ class Back_model extends StatelessWidget {
                   Positioned(
                     top: 35,
                     left: 90,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Trapezius()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: 45 * angles.pi / 180,
                       child: Container(
@@ -44,10 +59,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // LOWER BACK BUTTON
                   Positioned(
                     top: 165,
                     left: 122,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const LowerBack()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: 45 * angles.pi / 180,
                       child: Container(
@@ -60,10 +83,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+      ),
                   // LATS BUTTON LEFT
                   Positioned(
                     top: 115,
                     left: 85,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const LattissimusDorsi()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: -45 * angles.pi / 180,
                       child: Container(
@@ -76,10 +107,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // LATS BUTTON RIGHT
                   Positioned(
                     top: 115,
                     left: 160,
+                    child: GestureDetector(
+                       onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => const LattissimusDorsi()
+                      )
+                      );
+                    },
                     child: Transform.rotate(
                       angle: 45 * angles.pi / 180,
                       child: Container(
@@ -92,10 +131,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                   ),
                   // TRICEP BUTTON RIGHT
                   Positioned(
                     top: 100,
                     left: 213,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Triceps()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: -25 * angles.pi / 180,
                       child: Container(
@@ -108,10 +155,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // TRICEP BUTTON LEFT
                   Positioned(
                     top: 100,
                     left: 30,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Triceps()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: 25 * angles.pi / 180,
                       child: Container(
@@ -124,10 +179,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // CALVES BUTTON RIGHT
                   Positioned(
                     top: 340,
                     left: 170,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Calves()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                         angle: -10 * angles.pi / 180,
                       child: Container(
@@ -140,10 +203,18 @@ class Back_model extends StatelessWidget {
                     ),
                   ),
                   ),
+                  ),
                   // CALVES BUTTON LEFT
                   Positioned(
                     top: 340,
                     left: 68,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Calves()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: 10 * angles.pi / 180,
                       child: Container(
@@ -156,10 +227,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // HAMSTRING BUTTON LEFT
                   Positioned(
                     top: 260,
                     left: 80,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Hamstrings()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: 10 * angles.pi / 180,
                       child: Container(
@@ -172,10 +251,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // HAMSTRING BUTTON RIGHT
                   Positioned(
                     top: 260,
                     left: 155,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Hamstrings()
+                        )
+                        );
+                      },
                     child: Transform.rotate(
                       angle: -10 * angles.pi / 180,
                       child: Container(
@@ -188,10 +275,18 @@ class Back_model extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ),
                   // GLUTES BUTTON
                   Positioned(
                     top: 210,
                     left: 90,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const Glutes()
+                        )
+                        );
+                      },
                     child: Container(
                       width: 110,
                       height: 50,
@@ -200,6 +295,7 @@ class Back_model extends StatelessWidget {
                         borderRadius: BorderRadius.circular(40.0),
                       )
                     ),
+                  ),
                   ),
                   // Add more Positioned widgets for other clickable parts of the image
                 ],
