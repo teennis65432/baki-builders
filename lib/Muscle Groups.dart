@@ -2,19 +2,14 @@ import 'package:flutter/material.dart';
 import 'dart:math' as num;
 import 'Back_model.dart';
 import 'WorkoutPages/Muscles_core/Abs.dart';
-import 'WorkoutPages/Muscles_back/LatissimusDorsi.dart';
-import 'WorkoutPages/Muscles_back/LowerBack.dart';
 import 'WorkoutPages/Muscles_back/Trapezius.dart';
 import 'WorkoutPages/Muscles_core/Obliques.dart';
 import 'WorkoutPages/Muscles_lower/Calves.dart';
-import 'WorkoutPages/Muscles_lower/Glutes.dart';
-import 'WorkoutPages/Muscles_lower/Hamstrings.dart';
 import 'WorkoutPages/Muscles_lower/Quadriceps.dart';
 import 'WorkoutPages/Muscles_upper/Biceps.dart';
 import 'WorkoutPages/Muscles_upper/Chest.dart';
 import 'WorkoutPages/Muscles_upper/Forearms.dart';
 import 'WorkoutPages/Muscles_upper/Shoulders.dart';
-import 'WorkoutPages/Muscles_upper/Triceps.dart';
 
 
 class MuscleGroups extends StatelessWidget {
