@@ -22,10 +22,11 @@ class MuscleGroups extends StatelessWidget {
         title: const Text('Muscle Groups'),
         backgroundColor: Colors.orange,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+        body: SingleChildScrollView( //allows scrolling if image doesnt rezie
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children: [
             const Text(
               'Click on the muscle group you want to work on:',
               style: TextStyle(fontSize: 24),
@@ -51,15 +52,15 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Container(
-                      width: 50,
-                      height: 90,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(10.0), // Set the border radius to 10
+                      child: Container(
+                        width: 50,
+                        height: 90,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(10.0), // Set the border radius to 10
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // TRAPS BUTTON LEFT
                   Positioned(
@@ -72,15 +73,15 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Container(
-                      width: 110,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(25.0), // Set the border radius to 10
+                      child: Container(
+                        width: 110,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(25.0), // Set the border radius to 10
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // CHEST BUTTON
                   Positioned(
@@ -93,15 +94,15 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Container(
-                      width: 110,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(10.0), // Set the border radius to 10
+                      child: Container(
+                        width: 110,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(10.0), // Set the border radius to 10
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // SHOULDER BUTTON LEFT
                   Positioned(
@@ -114,18 +115,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 25 * num.pi / 180,
-                      child: Container(
-                          width: 38,
-                          height: 38,
-                          decoration: BoxDecoration(
-                            color: Colors.pink,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: 25 * num.pi / 180,
+                        child: Container(
+                            width: 38,
+                            height: 38,
+                            decoration: BoxDecoration(
+                              color: Colors.pink,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // SHOULDER BUTTON RIGHT
                   Positioned(
@@ -138,18 +139,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 25 * num.pi / 180,
-                      child: Container(
-                          width: 38,
-                          height: 38,
-                          decoration: BoxDecoration(
-                            color: Colors.pink,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: 25 * num.pi / 180,
+                        child: Container(
+                            width: 38,
+                            height: 38,
+                            decoration: BoxDecoration(
+                              color: Colors.pink,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // BICEPS BUTTON LEFT
                   Positioned(
@@ -162,18 +163,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 25 * num.pi / 180,
-                      child: Container(
-                          width: 35,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.orange,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: 25 * num.pi / 180,
+                        child: Container(
+                            width: 35,
+                            height: 55,
+                            decoration: BoxDecoration(
+                              color: Colors.orange,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // BICEPS BUTTON RIGHT
                   Positioned(
@@ -186,18 +187,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: -25 * num.pi / 180,
-                      child: Container(
-                          width: 35,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.orange,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: -25 * num.pi / 180,
+                        child: Container(
+                            width: 35,
+                            height: 55,
+                            decoration: BoxDecoration(
+                              color: Colors.orange,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // FOREARM BUTTON RIGHT
                   Positioned(
@@ -210,18 +211,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: -25 * num.pi / 180,
-                      child: Container(
-                          width: 30,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30.0),
-                          )
+                      child: Transform.rotate(
+                        angle: -25 * num.pi / 180,
+                        child: Container(
+                            width: 30,
+                            height: 55,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(30.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // FOREARM BUTTON LEFT
                   Positioned(
@@ -234,18 +235,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 25 * num.pi / 180,
-                      child: Container(
-                          width: 33,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30.0),
-                          )
+                      child: Transform.rotate(
+                        angle: 25 * num.pi / 180,
+                        child: Container(
+                            width: 33,
+                            height: 55,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(30.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // OBLIQUES BUTTON RIGHT
                   Positioned(
@@ -258,18 +259,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 25 * num.pi / 180,
-                      child: Container(
-                          width: 35,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: 25 * num.pi / 180,
+                        child: Container(
+                            width: 35,
+                            height: 55,
+                            decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // OBLIQUES BUTTON LEFT
                   Positioned(
@@ -282,18 +283,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: -15 * num.pi / 180,
-                      child: Container(
-                          width: 20,
-                          height: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: -15 * num.pi / 180,
+                        child: Container(
+                            width: 20,
+                            height: 55,
+                            decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // QUADS BUTTON RIGHT
                   Positioned(
@@ -306,18 +307,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: -10 * num.pi / 180,
-                      child: Container(
-                          width: 50,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            color: Colors.brown,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: -10 * num.pi / 180,
+                        child: Container(
+                            width: 50,
+                            height: 90,
+                            decoration: BoxDecoration(
+                              color: Colors.brown,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // QUADS BUTTON LEFT
                   Positioned(
@@ -330,18 +331,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 10 * num.pi / 180,
-                      child: Container(
-                          width: 50,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            color: Colors.brown,
-                            borderRadius: BorderRadius.circular(20.0),
-                          )
+                      child: Transform.rotate(
+                        angle: 10 * num.pi / 180,
+                        child: Container(
+                            width: 50,
+                            height: 90,
+                            decoration: BoxDecoration(
+                              color: Colors.brown,
+                              borderRadius: BorderRadius.circular(20.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // CALVES BUTTON RIGHT
                   Positioned(
@@ -354,18 +355,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: 10 * num.pi / 180, // Set the rotation angle to 45 degrees
-                      child: Container(
-                        width: 35,
-                        height: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(25.0),
+                      child: Transform.rotate(
+                        angle: 10 * num.pi / 180, // Set the rotation angle to 45 degrees
+                        child: Container(
+                          width: 35,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(25.0),
+                          ),
                         ),
                       ),
                     ),
-                  ),
                   ),
                   // CALVES BUTTON LEFT
                   Positioned(
@@ -378,18 +379,18 @@ class MuscleGroups extends StatelessWidget {
                         )
                         );
                       },
-                    child: Transform.rotate(
-                      angle: -10 * num.pi / 180,
-                      child: Container(
-                          width: 35,
-                          height: 70,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(25.0),
-                          )
+                      child: Transform.rotate(
+                        angle: -10 * num.pi / 180,
+                        child: Container(
+                            width: 35,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(25.0),
+                            )
+                        ),
                       ),
                     ),
-                  ),
                   ),
                   // Add more Positioned widgets for other clickable parts of the image
                 ],
@@ -419,6 +420,7 @@ class MuscleGroups extends StatelessWidget {
           ],
         ),
       ),
+    )
     );
   }
 }
