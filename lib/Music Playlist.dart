@@ -12,20 +12,20 @@ final String _accessToken = 'YOUR_ACCESS_TOKEN_HERE';
 final String _refreshToken = 'YOUR_REFRESH_TOKEN_HERE';
 
 final _credentials = auth.AccessCredentials(
-    // The nulls are placeholders, will be filled in with authentication info for test account made through Google Cloud
+    // The 0s are placeholders, will be filled in with authentication info for test account made through Google Cloud
     // This test account will allow us to authenticate with Google API without requiring users to log in themselves
-    auth.AccessToken(_accessToken, null, null),
+    auth.AccessToken(_accessToken, "0", 0 as DateTime),
     _refreshToken,
     ['https://www.googleapis.com/auth/youtube']);
 
 // errors here to be figured out later, the first is because await is being used outside of a function and can only be
 //  used in async function
-final _client = youtube.YouTubeApi(await auth.clientViaCredentials(_credentials));
+//final _client = youtube.YouTubeApi(await auth.clientViaCredentials(_credentials));
 
 class MusicPlaylist extends StatefulWidget {
   final String playlistId;
 
-  const MusicPlaylist({required this.playlistId, Key? key}) : super(key: key);
+  const MusicPlaylist({this.playlistId = 'default_id', Key? key}) : super(key: key);
 
   @override
   _MusicPlaylistState createState() => _MusicPlaylistState();
@@ -41,6 +41,7 @@ class _MusicPlaylistState extends State<MusicPlaylist> {
   @override
   void initState() {
     super.initState();
+    _playlistItems = []; // initialize the field with an empty list
 
     // Initializes the _controller variable with default flags in mute mode and auto play mode off
     _controller = YoutubePlayerController(
