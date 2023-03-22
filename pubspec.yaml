@@ -30,7 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  youtube_player_flutter: ^8.0.0
+  http: ^0.13.3
+  googleapis: ^10.1.0
 
 
 
@@ -41,7 +43,9 @@ dependencies:
   firebase_core: ^2.7.0
   firebase_auth: ^4.2.9
   cloud_firestore: ^4.4.3
-  youtube_player_flutter: ^8.0.0
+  googleapis_auth: ^1.4.0
+
+
 
 dev_dependencies:
   flutter_test:
