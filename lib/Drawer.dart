@@ -60,7 +60,7 @@ class DrawerWidget extends StatelessWidget {
                   title: const Text('Muscle Groups'),
                   onTap: () {
                     // Navigate to the home page when the tile is tapped
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Muscle_Groups())
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MuscleGroups())
                     );
                   },
                 ),

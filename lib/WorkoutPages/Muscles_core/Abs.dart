@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Account extends StatelessWidget {
-  const Account({Key? key}) : super(key: key);
+class Abs extends StatelessWidget {
+  const Abs ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
       appBar: AppBar(
-        title: const Text('Account'),
-        backgroundColor: Colors.orange, // Set the background color of the app bar
+        title: const Text('Abdominal Workouts'),
+        backgroundColor: Colors.orange,
       ),
-
-
       body: Container(
+        color: Colors.black45,
         // Add page content here
       ),
     );
