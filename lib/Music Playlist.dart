@@ -77,7 +77,9 @@ class _MusicPlaylistState extends State<MusicPlaylist> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Music Playlist'),
+        backgroundColor: Colors.orange,
       ),
+      backgroundColor: Colors.grey,
       body: Column(
         children: [
           YoutubePlayer(

@@ -21,7 +21,7 @@ class App extends StatelessWidget{
   ];
 
   dynamic quotes = [
-    "inspirational quotes here"
+    "If someone is born a male,\nat least once in his life he’ll dream of becoming the strongest man alive.\n -Yujiro hanma"
   ];
 
   AssetImage randImg(){
@@ -81,10 +81,7 @@ class App extends StatelessWidget{
                           )
                         ),
                         SizedBox(height: 20),
-                        Image(
-                          image: randImg(),
-                          height: 300
-                        )
+
                       ]
                     ),
                   ),

@@ -20,8 +20,10 @@ class MuscleGroups extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Muscle Groups'),
+        backgroundColor: Colors.orange,
       ),
-        body: SingleChildScrollView( //allows scrolling if image doesnt resize
+        backgroundColor: Colors.grey,
+        body: SingleChildScrollView(//allows scrolling if image doesnt resize
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

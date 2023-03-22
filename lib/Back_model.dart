@@ -18,6 +18,7 @@ class Back_model extends StatelessWidget {
         title: const Text('Muscle Groups'),
         backgroundColor: Colors.orange,
       ),
+        backgroundColor: Colors.grey,
         body: SingleChildScrollView( //allows scrolling if image doesnt resize
         child: Center(
           child: Column(
@@ -306,6 +307,7 @@ class Back_model extends StatelessWidget {
               },
             ),
             const SizedBox(height: 20),
+
             SizedBox(
               width: 200,
               height: 50,
