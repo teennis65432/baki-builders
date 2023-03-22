@@ -27,6 +27,7 @@ class DrawerWidget extends StatelessWidget {
     }
 
     return Drawer(
+
           child: Container(
             padding: const EdgeInsets.only(top: 45),
             //adds space from top to prevent overlapping with notification bar
