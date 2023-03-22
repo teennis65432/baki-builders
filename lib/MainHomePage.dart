@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -13,6 +15,33 @@ class App extends StatelessWidget{
   final Future<FirebaseApp> fbApp = Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  dynamic images = [
+    "assets/image/logov3.png"
+  ];
+
+  dynamic quotes = [
+    "inspirational quotes here"
+  ];
+
+  AssetImage randImg(){
+    int min = 0;
+    int max = images.length;
+    Random rnd = Random();
+    int r = min + rnd.nextInt(max - min);
+    String imageName = images[r].toString();
+    return AssetImage(imageName);
+  }
+
+  String randQuote() {
+    int min = 0;
+    int max = quotes.length;
+    Random rnd = Random();
+    int r = min + rnd.nextInt(max - min);
+    String quote = quotes[r].toString();
+    return quote;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,6 +60,36 @@ class App extends StatelessWidget{
                 backgroundColor: Colors.orange,
               ),
               drawer: DrawerWidget(),
+              body: Align(
+                alignment: Alignment.topCenter,
+                child:Container(
+                  height: 1000.0,
+                  width: MediaQuery.of(context).size.width,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: ListView(
+                      children: <Widget>[
+                        SizedBox(height: 50),
+                        Align(
+                          alignment: Alignment.center,
+                          child: RichText(
+                            text: TextSpan(
+                              text: randQuote(),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
+                            ),
+                          selectionColor: Color(0xFFFFFFFF),
+                          )
+                        ),
+                        SizedBox(height: 20),
+                        Image(
+                          image: randImg(),
+                          height: 300
+                        )
+                      ]
+                    ),
+                  ),
+                ),
+              ),
             );
           } else {
             return const Center(
