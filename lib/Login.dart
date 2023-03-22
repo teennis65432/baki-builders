@@ -8,7 +8,6 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
-        backgroundColor: Colors.orange,
       ),
       body: Container(
         // Add page content here

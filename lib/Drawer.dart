@@ -78,7 +78,7 @@ class DrawerWidget extends StatelessWidget {
                   title: const Text('Music Playlist'),
                   onTap: () {
                     // Navigate to the music playlist page when the tile is tapped
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Music_Playlist())
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MusicPlaylist())
                     );
                   },
                 ),
